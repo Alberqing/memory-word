@@ -1,0 +1,20 @@
+
+
+<template name="collect">
+   <view class="simple_look">
+   <image bindtap="read"  style="margin: auto; width: 25px; padding-right:5px;height: 25px; background-color: #fff;" mode="scaleToFill" src="../../images/ji.png"></image>
+
+   <view class='sim_word'>{{item.word}}</view>
+   <view class='quan'>权重:{{item.ease}}</view>
+   <view class='day_num'>{{item.day}}天前</view>
+   </view>
+</template>
+
+<view  class="pages">
+
+    <block wx:for="{{list}}">
+         <template is="collect" data="{{item}}"/>
+    </block>
+
+</view>
+
